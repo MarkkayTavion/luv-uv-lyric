@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import './App.css'
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, Switch } from 'react-router-dom'
 import Index from "./components/Index";
+import Tracks from "./components/Tracks";
 
 function App() {
   return (
     <Router>
-    <React.Fragment>
+     <React.Fragment>
       <Navbar />
+      <Tracks />
         <div className="container">
-          
-            <Route exact path="/" component={Index} />
-          
+            <Routes>
+              <Route exact path="/" component={Index} />
+            </Routes>
         </div>
       </React.Fragment>
     </Router>
