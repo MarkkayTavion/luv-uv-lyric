@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const Context = React.createContext();
+export const Context = React.createContext();
 
 export function ContextController ({ children }) {
     let intialState = {
@@ -32,4 +32,3 @@ export function ContextController ({ children }) {
     );
   }
 
-export const Consumer = Context.Consumer;

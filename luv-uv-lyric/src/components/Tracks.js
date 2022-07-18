@@ -1,34 +1,29 @@
-import React, { Component } from 'react';
-import { Consumer } from '../context';
+import React, { useContext } from 'react';
+import { Context } from '../context';
 import Loading from './Loading';
 import Track from './Track';
 
 
-class Tracks extends Component {
-    render() {
+const Tracks = () => {
+  const [state] = useContext(Context);
+  const { track_list, heading } = state;
+
+  if (track_list === undefined || track_list.length === 0) {
+    return <Loading />;
+  } else {
     return (
-        <Consumer>
-          {value => {
-            const { track_list, heading } = value;
-            console.log(value);
-            if(track_list === undefined || track_list.length === 0) {
-              return <Loading />
-            } else {
-              return ( 
-                <React.Fragment>
-                  <h3 className='text-center mb-4'>{heading}</h3>
-              <div className='row'>
-                {track_list.map(item => (
-                  <Track key={item.track.track_id} track={item.track} />
-                ))}
-              </div>
-              </React.Fragment>
-              )
-            }
-          }}
-        </Consumer>
+      <>
+        <h3 className="text-center mb-4">{heading}</h3>
+        <div className="row">
+          {track_list.map(item => (
+            <Track key={item.track.track_id} track={item.track} />
+          ))}
+        </div>
+      </>
     );
-    };
+  }
 };
 
 export default Tracks;
+
+
