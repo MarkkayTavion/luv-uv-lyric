@@ -4,11 +4,11 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Index from "./components/Index";
 import Tracks from "./components/Tracks";
-import { Provider } from "./context";
+import { ContextController } from "./context";
 
 function App() {
   return (
-    <Provider>
+    <ContextController>
     <Router>
      <React.Fragment>
       <Navbar />
@@ -20,7 +20,7 @@ function App() {
           </div>
         </React.Fragment>
       </Router>
-    </Provider>
+    </ContextController>
   );
 }
 
