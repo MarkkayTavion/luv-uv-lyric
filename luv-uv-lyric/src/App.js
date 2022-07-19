@@ -14,7 +14,7 @@ function App() {
     <Router>
      
       <Navbar />
-      <Tracks />
+      
         <div className="container">
             <Routes>
               <Route  path="/" element={<Index />} />

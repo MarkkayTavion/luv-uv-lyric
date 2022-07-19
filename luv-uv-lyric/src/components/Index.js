@@ -6,7 +6,7 @@ import Tracks from './Tracks'
 const Index = () => {
     return (
       <React.Fragment>
-        {/* <Search /> */}
+        <Search />
         <Tracks />
       </React.Fragment>
     );
