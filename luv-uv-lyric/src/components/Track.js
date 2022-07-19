@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Track = (props) => {
-    const { track } = props;
+const Track = ({ track }) => {
+    
 
     return (
         <div className="col-md-6">
@@ -21,9 +21,8 @@ const Track = (props) => {
             : {track.album_name}
           </p>
           <Link
-            to={`lyrics/${track.track_id}`}
-            className="btn btn-dark btn-block"
-          >
+            to={`/lyrics/${track.track_id}`}
+            className="btn btn-dark btn-block">
             <i className="fas fa-chevron-right" /> View Lyrics
           </Link>
         </div>

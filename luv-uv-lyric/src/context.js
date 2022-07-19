@@ -4,10 +4,10 @@ import axios from "axios";
 
 export const Context = React.createContext();
 
-export function ContextController ({ children }) {
+function ContentController ({ children }) {
     let intialState = {
         track_list: [],
-        heading: 'Top 10 Lyrics'
+        heading: ""
     };
 
     const [state, setState] = useState(intialState);
@@ -20,7 +20,7 @@ export function ContextController ({ children }) {
           }`
         )
         .then(res => {
-          console.log(res.data);
+        //   console.log(res.data);
           setState({
             track_list: res.data.message.body.track_list,
             heading: "Top 10 Tracks"
@@ -34,3 +34,4 @@ export function ContextController ({ children }) {
     );
   }
 
+export default ContentController
