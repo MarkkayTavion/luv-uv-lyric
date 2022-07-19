@@ -4,10 +4,10 @@ import axios from "axios";
 
 export const Context = React.createContext();
 
-export function ContextController ({ children }) {
+function ContentController ({ children }) {
     let intialState = {
         track_list: [],
-        heading: 'Top 10 Lyrics'
+        heading: ""
     };
 
     const [state, setState] = useState(intialState);
@@ -15,10 +15,12 @@ export function ContextController ({ children }) {
     useEffect(() => {
       
         axios.get(
-          "https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/chart.tracks.get?page=1&page_size=10&country=us&f_has_lyrics=1&apikey=75390edb5065b32d035ea658a7a19e81"
+          `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/chart.tracks.get?page=1&page_size=10&country=us&f_has_lyrics=1&apikey=${
+            process.env.REACT_APP_LUL_KEY
+          }`
         )
         .then(res => {
-          console.log(res.data);
+        //   console.log(res.data);
           setState({
             track_list: res.data.message.body.track_list,
             heading: "Top 10 Tracks"
@@ -32,3 +34,4 @@ export function ContextController ({ children }) {
     );
   }
 
+export default ContentController

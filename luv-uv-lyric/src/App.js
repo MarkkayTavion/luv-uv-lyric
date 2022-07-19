@@ -1,26 +1,29 @@
-import React, { useState } from "react";
+
 import './App.css'
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Index from "./components/Index";
-import Tracks from "./components/Tracks";
-import { ContextController } from "./context";
+import ContentController from "./context";
+import Lyrics from "./components/Lyrics";
+
+
 
 function App() {
   return (
-    <ContextController>
+    <ContentController>
     <Router>
-     <React.Fragment>
+     
       <Navbar />
-      <Tracks />
+      
         <div className="container">
             <Routes>
-              <Route exact path="/" component={Index} />
+              <Route  path="/" element={<Index />} />
+              <Route  path="/lyrics/:id" element={<Lyrics />} />
             </Routes>
           </div>
-        </React.Fragment>
+      
       </Router>
-    </ContextController>
+    </ContentController>
   );
 }
 
