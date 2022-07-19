@@ -33,9 +33,9 @@ const Search = () => {
   return (
     <div className="card bg-dark card-body mb-4 p-4">
       <h1 className="display-4 text-center">
-        <i className="fas fa-music" /> Search Your Fav Lyrics
+        <i className="fas fa-music" /> {`Luv Uv Lyric <3`}
       </h1>
-      <p className="lead text-center">Get the lyrics for any song</p>
+      <p className="lead text-center">Search the lyrics of the songs music luv!</p>
       <form onSubmit={findTrack}>
         <div className="form-group">
           <input

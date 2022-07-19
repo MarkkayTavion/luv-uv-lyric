@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Index from "./components/Index";
 import ContentController from "./context";
 import Lyrics from "./components/Lyrics";
-import Tracks from './components/Tracks';
+
 
 
 function App() {
