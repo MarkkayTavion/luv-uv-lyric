@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Index from "./components/Index";
 import Tracks from "./components/Tracks";
 import { ContextController } from "./context";
+import Lyrics from "./components/Lyrics";
+
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
       <Tracks />
         <div className="container">
             <Routes>
-              <Route exact path="/" component={Index} />
+              <Route  path="/" component={Index} />
+              <Route  path="/lyrics/:id" component={Lyrics} />
             </Routes>
           </div>
         </React.Fragment>
