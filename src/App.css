@@ -1,5 +1,5 @@
 * {
-    background: #b08f25;
+    background: linear-gradient(90deg, #a5b386 0%, rosybrown 100%);
 }
 
 .btn {
@@ -12,7 +12,7 @@
     font-weight: 700;
     color: #313133;
     background: rosybrown;
-  background: linear-gradient(90deg, rosybrown 0%, #a5b386 100%);
+    background: linear-gradient(90deg, rosybrown 0%, #a5b386 100%);
     border: none;
     border-radius: 1000px;
     box-shadow: 12px 12px 24px rosybrown;
@@ -77,3 +77,11 @@
       opacity: 0;
     }
   }
+
+.card {
+    background: linear-gradient(90deg, #a5b386 0%, rosybrown 100%);
+}
+.navbar-brand {
+    /* background: linear-gradient(90deg, #a5b386 0%, rosybrown 100%); */
+    color: linear-gradient(90deg, #a5b386 0%, rosybrown 100%);
+}
