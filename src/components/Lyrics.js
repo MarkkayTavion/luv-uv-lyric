@@ -16,8 +16,8 @@ const Lyrics = () => {
           track_id}&apikey=${process.env.REACT_APP_LUL_KEY}`
       )
       .then(res => {
-        let lyrics = res.data.message.body.lyrics;
-        setLyrics({ lyrics });
+        let lyrics = res.data.message.body.lyrics.lyrics_body;
+        setLyrics(lyrics);
 
         return axios.get(
           `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.get?track_id=${track_id
@@ -26,13 +26,13 @@ const Lyrics = () => {
       })
       .then(res => {
         let track = res.data.message.body.track;
-        setTrack({ track });
+        setTrack(track);
       })
       .catch(err => console.log(err));
   }, [track_id]);
     if (!track && !lyrics) {
-      return null
-    }
+      return <Loading />
+    } else {
   
     return (
       <>
@@ -45,7 +45,7 @@ const Lyrics = () => {
             <span className="text-secondary">{track.artist_name}</span>
           </h5>
           <div className="card-body">
-            <p className="card-text">{lyrics.lyrics_body}</p>
+            <p className="card-text">{lyrics}</p>
           </div>
         </div>
 
@@ -73,7 +73,7 @@ const Lyrics = () => {
         </ul>
       </>
     );
-  
+            };
 };
 
 export default Lyrics;
