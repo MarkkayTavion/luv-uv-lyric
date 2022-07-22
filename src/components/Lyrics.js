@@ -29,7 +29,7 @@ const Lyrics = () => {
         setTrack(track);
       })
       .catch(err => console.log(err));
-  }, []);
+  }, [track_id]);
   if (
     track === undefined ||
     lyrics === undefined ) {
