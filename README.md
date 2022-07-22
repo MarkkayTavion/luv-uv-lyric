@@ -18,7 +18,7 @@ Clone this portfolio
 To deploy this project run
 
 ```bash
-  npm run deploy
+ CI= npm run build
 ```
 
 This App can be visited at https://luv-uv-lyric.netlify.app
