@@ -28,6 +28,9 @@ This App can be visited at https://luv-uv-lyric.netlify.app
 
 **Server:** Node
 
+Using MusixMatch Api
+https://developer.musixmatch.com/documentation
+
 
 ## Screenshots
 https://github.com/MarkkayTavion/luv-uv-lyric/issues/10#issue-1315325208
