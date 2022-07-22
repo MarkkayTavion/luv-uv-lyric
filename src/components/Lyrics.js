@@ -29,8 +29,10 @@ const Lyrics = () => {
         setTrack(track);
       })
       .catch(err => console.log(err));
-  }, [track_id]);
-    if (!track && !lyrics) {
+  }, []);
+  if (
+    track === undefined ||
+    lyrics === undefined ) {
       return <Loading />
     } else {
   
@@ -67,7 +69,7 @@ const Lyrics = () => {
           <li className="list-group-item">
             <strong>Date</strong>:{" "}
             <Moment format="MM/DD/YYYY">
-              {track.track.first_release_date}
+              {track.first_release_date}
             </Moment>
           </li>
         </ul>
