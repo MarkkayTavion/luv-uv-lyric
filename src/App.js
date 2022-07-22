@@ -18,7 +18,7 @@ function App() {
         <div className="container">
             <Routes>
               <Route  path="/" element={<Index />} />
-              <Route  path="/lyrics/:id" element={<Lyrics />} />
+              <Route  path="/lyrics/:track_id" element={<Lyrics />} />
             </Routes>
           </div>
       
