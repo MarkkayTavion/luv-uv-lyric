@@ -30,15 +30,7 @@ This App can be visited at https://luv-uv-lyric.netlify.app
 
 
 ## Screenshots
- file:///home/markkaytavion/Pictures/Screenshots/Screenshot%20from%202022-07-14%2017-53-24.png
-
-file:///home/markkaytavion/Pictures/Screenshots/Screenshot%20from%202022-07-14%2017-55-15.png
-
- file:///home/markkaytavion/Pictures/Screenshots/Screenshot%20from%202022-07-14%2017-58-04.png
- 
- file:///home/markkaytavion/Pictures/Screenshots/Screenshot%20from%202022-07-22%2014-51-19.png
- 
- file:///home/markkaytavion/Pictures/Screenshots/Screenshot%20from%202022-07-22%2014-51-34.png
+https://github.com/MarkkayTavion/luv-uv-lyric/issues/10#issue-1315325208
  
 
 
