@@ -63,6 +63,8 @@ Using MusixMatch Api
 https://developer.musixmatch.com/documentation
 
 
+Oh! and CORS ANYWHERE ;-)
+
 ## Screenshots
 https://github.com/MarkkayTavion/luv-uv-lyric/issues/10#issue-1315325208
  
